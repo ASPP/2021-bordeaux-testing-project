@@ -12,3 +12,4 @@ def iterate_f(it, x_start, r):
         x = logistic_map(x, r)
         results.append(x)
     return results
+
