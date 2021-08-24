@@ -39,4 +39,24 @@ def test_log_nap(x,r,it,expected):
     elif len(result)==2:
         expected = [0.31875, 0.369152]
     assert np.all(np.isclose(expected,result))
-
+    
+    
+    
+    
+    
+def test_fuzzy():
+	result=[]
+	expected=1/3
+	r=1.5
+	it=1000
+	SEED=42
+	x=np.random.rand(1000,1)
+	#print(x)
+	
+	for i in x:
+		result = iterate_f(it=it, fn1=log_nap, r=r, x=i)
+		#print (result[:-100])
+		
+	
+		assert np.isclose(round(np.mean(result[:-100]),2),round(expected,2))
+			
