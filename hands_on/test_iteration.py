@@ -43,7 +43,7 @@ def test_log_nap(x,r,it,expected):
     
     
     
-    
+#function to add randomness    
 def test_fuzzy():
 	result=[]
 	expected=1/3
